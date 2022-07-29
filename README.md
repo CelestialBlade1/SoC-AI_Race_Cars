@@ -40,6 +40,41 @@ All of these stages are solved using Reinforcement Learning by Q-Learning. The c
 
 Final Part(July):
 
+We took up a challenging task- To apply Reinforcement Learning on a very complex environment provided by OpenAI Gym's box2d - CarRacing-v0
+
+The explanation of this problem, I copy from its documentation:
+"""
+The easiest control task to learn from pixels - a top-down racing environment. The generated track is random every episode.
+
+Some indicators are shown at the bottom of the window along with the state RGB buffer. From left to right: true speed, four ABS sensors, steering wheel position, and gyroscope
+Action Space
+There are 3 actions: steering (-1 is full left, +1 is full right), gas, and breaking.
+
+Observation Space
+State consists of 96x96 pixels.
+
+Rewards
+The reward is -0.1 every frame and +1000/N for every track tile visited, where N is the total number of tiles visited in the track. For example, if you have finished in 732 frames, your reward is 1000 - 0.1*732 = 926.8 points.
+
+Starting State
+The car starts at rest in the center of the road.
+
+Episode Termination
+The episode finishes when all of the tiles are visited. The car can also go outside of the playfield - that is, far off the track, in which case it will receive -100 reward and die.
+"""
+
+Our aim is to maximize the reward by making the car stay on path at all times and also progress forward at a reasonable speed. The system is typically considered solved if a consistent score of 900+ is achieved.
+
+
+My attempt at solving:
+I set up a Conda environment with Python 3.6 and tensorflow 1.15 to run Car-Racing-v0. I installed stable-baselines to apply its RL algorithms on my system.
+I have chosen the proximal policy optimization algorithm along applied with a convolutional neural network policy.
+
+The notebook of the same can be found in my repo.
+The model requires an extremely huge amount of training on my i5 core laptop(with CPU processing only). Typically training of 0.5-1 hours only gives a reward of about 120 points
+
+
+
 
 
 
