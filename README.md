@@ -73,6 +73,11 @@ I have chosen the proximal policy optimization algorithm along applied with a co
 The notebook of the same can be found in my repo.
 The model requires an extremely huge amount of training on my i5 core laptop(with CPU processing only). Typically training of 0.5-1 hours only gives a reward of about 120 points
 
+I have attached multiple trained models at different training times.
+
+
+My comments:
+Overall, it was a unique experience and I got to learn a lot of things. Reinforcement Learning is a very interesting topic and it has indeed been an excellent start to my coding journey
 
 
 
